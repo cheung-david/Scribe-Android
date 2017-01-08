@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center_horizontal"
+tools:context="com.dc.scribe.activities.CameraActivity">
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/camera_icon"
+        android:src="@android:drawable/ic_menu_camera"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp" />
+    <ImageView
+        android:paddingLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/camera_gallery_icon"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:paddingRight="8dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_gravity="center_vertical" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/upload_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Upload"
+            android:id="@+id/uploadText"
+            android:gravity="center_vertical" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/camera_upload_icon"
+            android:paddingRight="16dp"
+            android:paddingLeft="8dp"
+            android:src="@android:drawable/ic_menu_upload_you_tube" />
+    </LinearLayout>
+</LinearLayout>
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:id="@+id/camera_empty_view"
+        android:layout_margin="8dp"
+        android:src="@drawable/camera_retro" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/camera_image_preview"
+        android:layout_margin="8dp" />
+
+</LinearLayout>

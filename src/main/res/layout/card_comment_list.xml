@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ECECEC"
+    card_view:cardCornerRadius="0dp"
+    android:elevation="0dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    card_view:contentPaddingLeft="-3dp"
+    card_view:contentPaddingRight="-3dp"
+    card_view:contentPaddingTop="-3dp"
+    card_view:contentPaddingBottom="-3dp"
+    android:id="@+id/card_comment_list">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#fafafa">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/comment_author_image"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/profile_btn"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFFFF"
+            android:adjustViewBounds="false"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="David"
+                android:id="@+id/comment_author_name"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:textColor="#5d5c5c"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Cards may be expanded to reveal more content, without using scrolling."
+                android:id="@+id/comment_text"
+                android:textSize="14sp"
+                android:layout_marginLeft="16dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 day ago"
+            android:id="@+id/comment_date"
+            android:minWidth="70dp"
+            android:gravity="right" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

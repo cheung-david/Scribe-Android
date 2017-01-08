@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ECECEC"
+    android:id="@+id/card_feed"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="2dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    card_view:cardUseCompatPadding="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/card_holder">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="15dp"
+            android:paddingRight="16dp"
+            android:id="@+id/card_header">
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:elevation="12dp"-->
+                <!--android:id="@+id/view2"-->
+                <!--card_view:cardCornerRadius="40dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:innerRadius="0dp"-->
+                <!--android:shape="ring"-->
+                <!--android:thicknessRatio="1.9">-->
+                <!--<ImageView-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:id="@+id/card_author_image"-->
+                    <!--android:src="@drawable/ali"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_centerHorizontal="true">-->
+                <!--</ImageView>-->
+            <!--</android.support.v7.widget.CardView>-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_author_image"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ali"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFFFFF"
+                android:adjustViewBounds="false"
+                android:baselineAlignBottom="false"
+                android:cropToPadding="false" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="200dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="15sp"
+                    android:textColor="#5d5c5c"
+                    android:paddingRight="16dp"
+                    android:id="@+id/card_title"
+                    android:fontFamily="@string/abc_font_family_title_material"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="August 18, 2016"
+                    android:id="@+id/card_date"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="16dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/abc_font_family_subhead_material" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Follow"
+                android:id="@+id/cardFollowBtn"
+                android:textColor="#ffffff"
+                android:background="#338cff"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:layout_widthPercent="100%"
+                app:layout_aspectRatio="178%"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ali"
+                android:id="@+id/card_image"
+                android:cropToPadding="false"
+                android:baselineAlignBottom="false"
+                android:adjustViewBounds="false" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/card_like"
+                android:src="@drawable/ic_heart"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="8"
+                android:id="@+id/card_likes_count"
+                android:textSize="14sp"
+                android:paddingRight="8dp"
+                android:gravity="center_vertical" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/card_comments"
+                android:src="@drawable/ic_comment"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="8"
+                android:id="@+id/card_comments_count"
+                android:textSize="14sp"
+                android:paddingRight="8dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/content_card_comment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/comment_send_text"
+                android:layout_toLeftOf="@+id/comment_send_btn"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="4dp"
+                android:hint="Add a comment" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/comment_send_btn"
+                android:src="@drawable/social_send_now"
+                android:background="#ffffff"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="4dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

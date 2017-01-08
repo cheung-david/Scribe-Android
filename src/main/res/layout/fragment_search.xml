@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dc.scribe.fragments.SearchFragment"
+    android:id="@+id/fragment_search_container"
+    android:background="@color/design_fab_shadow_mid_color">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_search_container"
+        android:layout_gravity="right|center_vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click Me To Explore"
+            android:id="@+id/exploreBtn"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/com_facebook_button_send_background_color"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="6dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content_search"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</FrameLayout>

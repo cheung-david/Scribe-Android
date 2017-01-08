@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dc.scribe.fragments.HomeFragment"
+    android:background="@color/material_grey_100"
+    android:id="@+id/fragment_home_container">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content_feed"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp">
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/no_feed_available"
+        android:textSize="30sp"
+        android:textColor="#3d3d3d" />
+    <TextView
+        android:id="@+id/error_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/connection_error"
+        android:textSize="30sp"
+        android:textColor="#3d3d3d" />
+
+</FrameLayout>
